@@ -1,0 +1,219 @@
+//====================================================================================================
+.header {
+  padding: rem(28) 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 4;
+  @media (max-width: $tablet) {
+    padding: rem(12) 0;
+  }
+  // .header__container
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  // .header__logo
+  &__logo {
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+    margin-right: rem(100);
+    .logo-menu {
+      display: none;
+    }
+    .menu-open & {
+      .logo {
+        display: none;
+      }
+      .logo-menu {
+        display: block;
+      }
+    }
+    @media (max-width: $pc) {
+      margin-right: rem(30);
+    }
+    @media (max-width: em(800)) {
+      max-width: rem(90);
+    }
+  }
+  // .header__menu
+  &__menu {
+    flex: 1 1 auto;
+    justify-content: flex-end;
+  }
+}
+.menu {
+  display: flex;
+  align-items: center;
+  gap: rem(70);
+  flex: 1 1 auto;
+  justify-content: flex-end;
+  @media (max-width: $pc) {
+    gap: rem(30);
+  }
+  // .menu__icon
+  &__icon {
+  }
+  // .menu__body
+  &__body {
+    flex: 1 1 auto;
+    @media (max-width: $mobile) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      transform: translateX(-100%);
+      background: #f4f8ff;
+      padding: rem(66) rem(15) rem(40);
+      .menu-open & {
+        transform: translateX(0);
+      }
+    }
+  }
+  // .menu__list
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(10);
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+    @media (max-width: $pc) {
+      justify-content: center;
+      gap: rem(25);
+    }
+    @media (max-width: $tablet) {
+      gap: rem(15);
+    }
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: center;
+      gap: rem(30);
+      padding: rem(20) 0;
+    }
+  }
+  // .menu__item
+  &__item {
+  }
+  // .menu__link
+  &__link {
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: 130%;
+    color: #fff;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    @media (max-width: $tablet) {
+      font-size: rem(16);
+    }
+    @media (max-width: $mobile) {
+      font-size: 22px;
+      line-height: 130%;
+      text-align: center;
+      color: var(--mainColor);
+    }
+    &:hover {
+      color: var(--violetColor);
+    }
+  }
+  // .menu__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: rem(30);
+    @media (max-width: $tablet) {
+      gap: rem(15);
+    }
+  }
+  // .menu__button
+  &__button {
+    position: relative;
+    z-index: 5;
+    &.mob-none {
+      @media (max-width: $mobile) {
+        display: none;
+      }
+    }
+    &.pc-none {
+      font-size: rem(16);
+      @media (min-width: $mobile) {
+        display: none;
+      }
+    }
+    @media (max-width: $tablet) {
+      padding: rem(0) rem(17.5);
+    }
+  }
+}
+.icon-menu {
+}
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+  display: none;
+  @media (max-width: $mobile) {
+    display: block;
+    position: relative;
+    width: rem(42);
+    height: rem(42);
+    background: #7897da;
+    border: 2px solid #7897da;
+    box-shadow: 0px 14px 41px rgba(41, 12, 12, 0.11);
+    border-radius: 40px;
+    z-index: 5;
+    @media (any-hover: none) {
+      cursor: default;
+    }
+    span,
+    &::before,
+    &::after {
+      content: '';
+      transition: all 0.3s ease 0s;
+      position: absolute;
+      width: 14px;
+      height: rem(2);
+      background-color: #fff;
+      border-radius: 2px;
+      transform: translate(-50%, 0);
+      left: 50%;
+    }
+    &::before {
+      top: 14px;
+    }
+    &::after {
+      bottom: 14px;
+      width: 8px;
+      transform: translate(calc(-50% - 2px), 0);
+    }
+    span {
+      top: calc(50% - rem(1));
+    }
+    .menu-open & {
+      span {
+        width: 0;
+      }
+      &::before,
+      &::after {
+        transform: translate(calc(-50%), 0) rotate(-45deg);
+        width: 16px;
+      }
+      &::before {
+        top: calc(50% - rem(1));
+        transform: translate(-50%, 0) rotate(-45deg);
+      }
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: translate(-50%, 0) rotate(45deg);
+      }
+    }
+  }
+}

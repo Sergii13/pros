@@ -1,0 +1,12 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.title {
+  font-weight: 700;
+  font-size: rem(45);
+  line-height: 130%;
+  @media (max-width: $tablet) {
+    font-size: rem(34);
+  }
+  @media (max-width: $mobile) {
+    font-size: rem(22);
+  }
+}
