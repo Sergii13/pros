@@ -1,0 +1,24 @@
+.order-head {
+  padding: rem(145) 0 rem(50);
+  background: url('@img/order/bg.jpg') 0 0 / cover no-repeat;
+  color: #fff;
+  @media (max-width: $mobile) {
+    padding: rem(70) 0 rem(20);
+  }
+  // .order-head__container
+  &__container {
+  }
+  // .order-head__title
+  &__title {
+    font-weight: 700;
+    @include adaptiveValue('font-size', 48, 22);
+    line-height: 112.5%;
+    text-align: center;
+    &:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+  }
+  // .order-head__breadcrumbs
+  &__breadcrumbs {
+  }
+}

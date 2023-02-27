@@ -22,11 +22,11 @@
 
 // <INPUTS>
 // Сніппет (HTML): inp
-// @import "input";
+@import 'input';
 
 // <CHECK>
 // Сніппет (HTML): chk
-// @import "checkbox";
+@import 'checkbox';
 
 // <RADIO>
 // Сніппет (HTML): opt
@@ -42,7 +42,7 @@
 
 // <QUANTITY>
 // Сніппет (HTML): qa
-// @import "quantity";
+@import 'quantity';
 
 // <RANGE>
 // Сніппет (HTML):
@@ -50,4 +50,4 @@
 
 // <CALENDAR>
 // Сніппет (HTML):
-// @import "datepicker";
+@import 'datepicker';

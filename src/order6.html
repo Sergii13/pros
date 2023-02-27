@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"Order2" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <section class="order-head">
+          <div class="order-head__container">
+            <h1 class="order-head__title">Make Order</h1>
+            <ul class="order-head__breadcrumbs breadcrumbs">
+              <li class="breadcrumbs__item">
+                <a href="" class="breadcrumbs__link"> Home </a>
+              </li>
+              <li class="breadcrumbs__item">
+                <span class="breadcrumbs__current"> Make order </span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <div class="order">
+          <div class="order__container">
+            <div class="order__content">
+              <div class="order__step step-order">
+                <div class="step-order__item active">1</div>
+                <div class="step-order__item active">2</div>
+                <div class="step-order__item">3</div>
+                <div class="step-order__item">4</div>
+              </div>
+              <h2 class="order__title">Household objects</h2>
+              <form action="#" class="form order__form">
+                <div class="form-nav form__nav">
+                  <button class="form-nav__item">
+                    <span>Living room</span>
+                  </button>
+                  <button class="form-nav__item"><span>Bathroom</span></button>
+                  <button class="form-nav__item"><span>Kitchen</span></button>
+                  <button class="form-nav__item"><span>Bedroom</span></button>
+                  <button class="form-nav__item active">
+                    <span>Shed</span>
+                  </button>
+                  <button class="form-nav__item"><span>Attic</span></button>
+                </div>
+                <div class="form__row">
+                  <div class="form__column">
+                    <div class="quantity">
+                      <div class="quantity__label">Boxes</div>
+                      <div class="quantity__actions">
+                        <button type="button" class="quantity__button">
+                          -
+                        </button>
+                        <div class="quantity__input">
+                          <input
+                            autocomplete="off"
+                            type="text"
+                            name="form[]"
+                            value="0"
+                          />
+                        </div>
+                        <button type="button" class="quantity__button">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="quantity">
+                      <div class="quantity__label">Small bike</div>
+                      <div class="quantity__actions">
+                        <button type="button" class="quantity__button">
+                          -
+                        </button>
+                        <div class="quantity__input">
+                          <input
+                            autocomplete="off"
+                            type="text"
+                            name="form[]"
+                            value="0"
+                          />
+                        </div>
+                        <button type="button" class="quantity__button">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="quantity">
+                      <div class="quantity__label">Large bike</div>
+                      <div class="quantity__actions">
+                        <button type="button" class="quantity__button">
+                          -
+                        </button>
+                        <div class="quantity__input">
+                          <input
+                            autocomplete="off"
+                            type="text"
+                            name="form[]"
+                            value="0"
+                          />
+                        </div>
+                        <button type="button" class="quantity__button">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form__column">
+                    <div class="quantity">
+                      <div class="quantity__label">Ladder</div>
+                      <div class="quantity__actions">
+                        <button type="button" class="quantity__button">
+                          -
+                        </button>
+                        <div class="quantity__input">
+                          <input
+                            autocomplete="off"
+                            type="text"
+                            name="form[]"
+                            value="0"
+                          />
+                        </div>
+                        <button type="button" class="quantity__button">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="quantity">
+                      <div class="quantity__label">Garden tools</div>
+                      <div class="quantity__actions">
+                        <button type="button" class="quantity__button">
+                          -
+                        </button>
+                        <div class="quantity__input">
+                          <input
+                            autocomplete="off"
+                            type="text"
+                            name="form[]"
+                            value="0"
+                          />
+                        </div>
+                        <button type="button" class="quantity__button">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="quantity">
+                      <div class="quantity__label">Workbench</div>
+                      <div class="quantity__actions">
+                        <button type="button" class="quantity__button">
+                          -
+                        </button>
+                        <div class="quantity__input">
+                          <input
+                            autocomplete="off"
+                            type="text"
+                            name="form[]"
+                            value="0"
+                          />
+                        </div>
+                        <button type="button" class="quantity__button">
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__row">
+                  <div class="form__column">
+                    <div class="form-item">
+                      <label class="form-item__label">
+                        Overall size
+                        <input
+                          autocomplete="off"
+                          type="text"
+                          name="form[]"
+                          data-error="Ошибка"
+                          placeholder="Overall size"
+                          class="input form-item__input"
+                        />
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form__column">
+                    <div class="form-item">
+                      <label class="form-item__label">
+                        Cargo Picture
+                        <input
+                          autocomplete="off"
+                          type="text"
+                          name="form[]"
+                          data-error="Ошибка"
+                          placeholder="Cargo Picture"
+                          class="input form-item__input"
+                        />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+              <div class="order__buttons">
+                <a href="" class="order__button button button_border"> Back </a>
+                <a href="" class="order__button button"> Next </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

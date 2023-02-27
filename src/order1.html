@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"Order1" })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <section class="order-head">
+          <div class="order-head__container">
+            <h1 class="order-head__title">Make Order</h1>
+            <ul class="order-head__breadcrumbs breadcrumbs">
+              <li class="breadcrumbs__item">
+                <a href="" class="breadcrumbs__link"> Home </a>
+              </li>
+              <li class="breadcrumbs__item">
+                <span class="breadcrumbs__current"> Make order </span>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <div class="order">
+          <div class="order__container">
+            <div class="order__content">
+              <div class="order__step step-order">
+                <div class="step-order__item active">1</div>
+                <div class="step-order__item">2</div>
+                <div class="step-order__item">3</div>
+                <div class="step-order__item">4</div>
+              </div>
+              <h2 class="order__title">Job Name</h2>
+              <form action="#" class="form order__form">
+                <div class="form__name-item">
+                  <div class="form__name-text">
+                    Good name helps specialissts better understand what you need
+                    them to do
+                  </div>
+                  <input
+                    autocomplete="off"
+                    type="text"
+                    name="form[]"
+                    placeholder=""
+                    class="input"
+                  />
+                </div>
+                <div class="order__title">Do you need other services</div>
+                <div class="form__checkboxes-row">
+                  <div class="form__checkboxes">
+                    <div class="form__checkbox-item">
+                      <div class="checkbox">
+                        <input
+                          id="c_1"
+                          data-error="Ошибка"
+                          class="checkbox__input"
+                          type="checkbox"
+                          value="1"
+                          name="form[]"
+                        />
+                        <label for="c_1" class="checkbox__label"
+                          ><span class="checkbox__text">Packing</span></label
+                        >
+                      </div>
+                    </div>
+                    <div class="form__checkbox-item">
+                      <div class="checkbox">
+                        <input
+                          id="c_2"
+                          data-error="Ошибка"
+                          class="checkbox__input"
+                          type="checkbox"
+                          value="1"
+                          name="form[]"
+                        />
+                        <label for="c_2" class="checkbox__label"
+                          ><span class="checkbox__text"
+                            >Lower the load</span
+                          ></label
+                        >
+                      </div>
+                    </div>
+                    <div class="form__checkbox-item">
+                      <div class="checkbox">
+                        <input
+                          id="c_3"
+                          data-error="Ошибка"
+                          class="checkbox__input"
+                          type="checkbox"
+                          value="1"
+                          name="form[]"
+                        />
+                        <label for="c_3" class="checkbox__label"
+                          ><span class="checkbox__text"
+                            >Lift the load</span
+                          ></label
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <input
+                    autocomplete="off"
+                    type="text"
+                    name="form[]"
+                    data-error="Ошибка"
+                    placeholder="If yes which floor"
+                    class="input"
+                  />
+                </div>
+                <div class="form__comment">
+                  <div class="form__comment-label">Comments</div>
+                  <textarea class="input"></textarea>
+                </div>
+              </form>
+
+              <div class="order__buttons">
+                <a href="" class="order__button button button_border"> Back </a>
+                <a href="" class="order__button button"> Next </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_js.htm',{})
+  </body>
+</html>

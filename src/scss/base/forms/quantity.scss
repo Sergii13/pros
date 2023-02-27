@@ -1,54 +1,53 @@
-//<QUANTITY>
-// Сніппет (HTML): qa
 .quantity {
-	width: 88px;
-	height: 40px;
-	display: flex;
-	border: 1px solid rgba(166, 166, 166, 0.45);
-	// .quantity__button
-	&__button {
-		flex: 0 0 30px;
-		position: relative;
-		cursor: pointer;
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transition: all 0.3s ease 0s;
-			margin: 0px 0px 0px -4.5px;
-			background-color: #a6a6a6;
-			width: 9px;
-			height: 1px;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				&::before,
-				&::after {
-					background-color: rgba(0, 0, 0, 0.5);
-				}
-			}
-		}
-		// .quantity__button_plus
-		&_plus {
-			&::before {
-				transform: rotate(-90deg);
-			}
-		}
-		// .quantity__button_minus
-		&_minus {
-		}
-	}
-	// .quantity__input
-	&__input {
-		flex: 1 1 auto;
-		input {
-			height: 100%;
-			color: #a6a6a6;
-			font-size: 12px;
-			width: 100%;
-			text-align: center;
-		}
-	}
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: rem(20);
+  font-weight: 700;
+  line-height: 155%;
+  font-size: 20px;
+  @media (max-width: $tablet) {
+    font-size: rem(14);
+  }
+  @media (max-width: $mobile) {
+    font-size: rem(12);
+  }
+  // .quantity__button
+  &__button {
+    color: #7897da;
+    font-size: 20px;
+  }
+  // .quantity__input
+  &__input {
+    width: 160px;
+    @media (max-width: $mobile) {
+      width: 84px;
+    }
+    input {
+      border: 2px solid #7897da;
+      filter: drop-shadow(0px 14px 41px rgba(41, 12, 12, 0.11));
+      border-radius: 40px;
+      height: 42px;
+      background: transparent;
+      display: block;
+      width: 100%;
+      text-align: center;
+      color: #7897da;
+      font-weight: 700;
+      font-size: 18px;
+      @media (max-width: $mobile) {
+        height: 30px;
+        font-size: 12px;
+      }
+    }
+  }
+  &__label {
+    color: rgba(13, 25, 49, 0.6);
+  }
+  // .quntity__actions
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+  }
 }

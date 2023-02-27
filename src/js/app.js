@@ -89,12 +89,12 @@ import * as flsForms from './files/forms/forms.js';
 
 /* Робота з полями форми */
 /* Документація: https://template.fls.guru/template-docs/rabota-s-formami.html */
-/*
+
 flsForms.formFieldsInit({
-	viewPass: false,
-	autoHeight: false
+  viewPass: false,
+  autoHeight: false,
 });
-*/
+
 /* Надсилання форми */
 /* Документація: https://template.fls.guru/template-docs/rabota-s-formami.html */
 // flsForms.formSubmit();
@@ -109,7 +109,7 @@ flsForms.formFieldsInit({
 // import './libs/select.js'
 
 /* Модуль роботи з календарем */
-// import './files/forms/datepicker.js'
+import './files/forms/datepicker.js';
 
 /* (У роботі) Модуль роботи з масками.*/
 /*

@@ -1,0 +1,309 @@
+.order {
+  padding: rem(100) 0;
+  @media (max-width: $mobile) {
+    padding: rem(30) 0 rem(20);
+  }
+  // .order__container
+  &__container {
+  }
+  // .order__content
+  &__content {
+    background: #ffffff;
+    box-shadow: 0px 8px 39px rgba(0, 0, 0, 0.07);
+    border-radius: 20px;
+    padding: rem(46) rem(90) rem(55);
+    @media (max-width: $tablet) {
+      padding: 20px;
+    }
+  }
+  // .order__step
+  &__step {
+  }
+  // .order__title
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 130%;
+    @media (max-width: $mobile) {
+      font-size: rem(22);
+      text-align: center;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(13);
+      @media (max-width: $mobile) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  // .order__form
+  &__form {
+  }
+  // .order__buttons
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem(27);
+    @media (max-width: $mobile) {
+      margin-top: 20px;
+    }
+  }
+  // .order__button
+  &__button {
+  }
+}
+.step-order {
+  display: flex;
+  justify-content: space-between;
+  max-width: rem(706);
+  position: relative;
+  margin: 0 auto 46px;
+  @media (max-width: $mobile) {
+    margin: 0 37px 21px;
+  }
+  &::after {
+    content: '';
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #7897da;
+    opacity: 0.5;
+    transform: translateY(-50%);
+    position: absolute;
+  }
+  // .step-order__item
+  &__item {
+    font-weight: 700;
+    width: 61px;
+    height: 61px;
+    font-size: 18px;
+    line-height: 130%;
+    border: 2px solid #bccbed;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0px 14px 41px rgba(41, 12, 12, 0.11));
+    border-radius: 40px;
+    color: rgba(120, 151, 218, 0.7);
+    @media (max-width: $mobile) {
+      width: 24px;
+      height: 24px;
+      font-size: rem(14);
+    }
+    &.active {
+      background: #7897da;
+      color: #fff;
+      border: 2px solid #7897da;
+    }
+  }
+}
+.active {
+}
+.form {
+  // .form__name-item
+  &__name-item {
+    &:not(:last-child) {
+      margin-bottom: rem(34);
+      @media (max-width: $mobile) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+  // .form__name-text
+  &__name-text {
+    @include adaptiveValue('font-size', 20, 12);
+    line-height: 155%;
+    color: rgba(13, 25, 49, 0.6);
+    margin-bottom: 20px;
+    @media (max-width: $mobile) {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+  }
+  &__checkboxes-row {
+    display: flex;
+    align-items: center;
+    gap: rem(30);
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: rem(20);
+    }
+    .input {
+      max-width: rem(400);
+      @media (max-width: $mobile) {
+        max-width: 100%;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(13);
+      @media (max-width: $mobile) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  // .form__checkboxes
+  &__checkboxes {
+  }
+  // .form__checkbox-item
+  &__checkbox-item {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+  }
+  // .form__checkbox-info-text
+  &__checkbox-info-text {
+    background: linear-gradient(
+      180deg,
+      rgba(120, 151, 218, 0.1) 0%,
+      rgba(120, 151, 218, 0) 100%
+    );
+    color: rgba(13, 25, 49, 0.6);
+    border: 1px solid rgba(120, 151, 218, 0.1);
+    padding: rem(5) rem(13);
+    max-width: rem(400);
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    height: 59px;
+    border-radius: 20px;
+  }
+  // .form__comment
+  &__comment {
+  }
+  // .form__comment-label
+  &__comment-label {
+    font-size: 20px;
+    line-height: 155%;
+    margin-bottom: 7px;
+    color: rgba(13, 25, 49, 0.6);
+    @media (max-width: $tablet) {
+      font-size: rem(16);
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(12);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(7);
+    }
+  }
+}
+.form-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: rem(12) rem(30);
+  margin: 27px 0 40px;
+  @media (max-width: $mobile) {
+    margin: 0 auto 17px;
+  }
+  // .form-nav__item
+  &__item {
+    font-size: rem(20);
+    text-align: left;
+    line-height: 130%;
+    flex: 1 0 auto;
+    transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+    @media (max-width: $mobile) {
+      font-size: 14px;
+    }
+    span {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -6px;
+        height: 2px;
+        width: 0px;
+        left: 0;
+        background: #7897da;
+        transition: all 0.3s cubic-bezier(0.5, 0.02, 0.13, 0.5);
+      }
+    }
+    &.active {
+      font-weight: 700;
+      color: #7897da;
+      span {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+    &:hover {
+      color: #7897da;
+    }
+  }
+}
+.form {
+  // .form__nav
+
+  // .form__row
+  &__row {
+    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(30);
+    @media (max-width: em(600)) {
+      gap: rem(10);
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+    }
+  }
+  &__items {
+    display: grid;
+    gap: rem(7);
+  }
+  // .form__column
+  &__column {
+    display: grid;
+    gap: rem(15);
+    .checkbox {
+      margin-top: rem(5);
+    }
+    @media (max-width: $mobile) {
+      gap: rem(10);
+    }
+  }
+}
+
+.form-item {
+  // .form-item__label
+  &__label {
+    display: grid;
+    gap: rem(7);
+    font-weight: 700;
+    font-size: rem(20);
+    line-height: 155%;
+    position: relative;
+    color: rgba(13, 25, 49, 0.6);
+    @media (max-width: $tablet) {
+      font-size: rem(16);
+    }
+    @media (max-width: $mobile) {
+      font-size: rem(12);
+    }
+  }
+  // .form-item__input
+  &__input {
+  }
+  &__icon {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    width: 23px;
+    height: 23px;
+    @media (max-width: $mobile) {
+      bottom: 11px;
+      right: 13px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
