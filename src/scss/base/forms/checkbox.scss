@@ -1,5 +1,25 @@
 .checkbox {
   position: relative;
+  &_small {
+    .checkbox__input:checked + .checkbox__label::before {
+      background: url('@img/svg/check.svg') center / 14px 14px no-repeat;
+    }
+    .checkbox__label {
+      gap: 7px;
+      &::before {
+        content: '';
+        width: 25px;
+        height: 25px;
+      }
+    }
+    .checkbox__text {
+      font-size: 18px;
+      font-weight: 400;
+      @media (max-width: $mobile) {
+        font-size: 14px;
+      }
+    }
+  }
   // .checkbox__input
   &__input {
     position: absolute;

@@ -603,7 +603,7 @@
     border-radius: 20px;
     padding: 30px 26px 30px 41px;
     @media (max-width: $mobile) {
-      padding: 20px;
+      padding: 12px 20px;
     }
     &:not(:last-child) {
       margin-bottom: rem(22);
@@ -617,8 +617,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: rem(10) rem(20);
+    gap: rem(16) rem(20);
     flex-wrap: wrap;
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+    }
   }
   // .profile-funds__head
   &__head {
@@ -626,7 +629,7 @@
   // .profile-funds__summ
   &__summ {
     font-weight: 700;
-    @include adaptiveValue('font-size', 40, 20);
+    @include adaptiveValue('font-size', 40, 32);
     line-height: 130%;
   }
   // .profile-funds__right
@@ -637,12 +640,20 @@
     @media (max-width: $mobile) {
       gap: rem(12);
     }
+    @media (max-width: $mobileSmall) {
+      flex-direction: column;
+      width: 100%;
+      gap: rem(9);
+    }
   }
   // .profile-funds__button
   &__button {
     width: 220px;
     @media (max-width: $mobile) {
       width: 140px;
+    }
+    @media (max-width: $mobileSmall) {
+      width: 100%;
     }
   }
   // .profile-funds__button-menu
@@ -656,11 +667,16 @@
       width: 20px;
       height: 20px;
     }
+    @media (max-width: $mobileSmall) {
+      img {
+        transform: rotate(90deg);
+      }
+    }
   }
   // .profile-funds__title
   &__title {
     font-weight: 700;
-    @include adaptiveValue('font-size', 24, 14);
+    @include adaptiveValue('font-size', 24, 16);
     line-height: 130%;
     &:not(:last-child) {
       margin-bottom: rem(5);
@@ -668,7 +684,7 @@
   }
   // .profile-funds__text
   &__text {
-    @include adaptiveValue('font-size', 18, 12);
+    @include adaptiveValue('font-size', 18, 14);
     line-height: 130%;
     color: rgba(13, 25, 49, 0.6);
   }
