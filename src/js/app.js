@@ -74,7 +74,7 @@ flsFunctions.spollers();
 Документація: https://template.fls.guru/template-docs/funkcional-popup.html
 Сніппет (HTML): pl, pop
 */
-// import './libs/popup.js'
+import './libs/popup.js';
 
 /*
 Модуль паралаксу мишею
@@ -106,7 +106,7 @@ flsForms.formFieldsInit({
 // flsForms.formRating();
 
 /* Модуль роботи з select. */
-// import './libs/select.js'
+import './libs/select.js';
 
 /* Модуль роботи з календарем */
 import './files/forms/datepicker.js';
@@ -147,7 +147,7 @@ import './files/forms/datepicker.js';
 Документація плагіна: https://swiperjs.com/
 Сніппет(HTML): swiper
 */
-//import "./files/sliders.js";
+import './files/sliders.js';
 
 // ========================================================================================================================================================================================================================================================
 // Модулі роботи з прокручуванням сторінки ========================================================================================================================================================================================================================================================
@@ -217,7 +217,7 @@ flsScroll.pageNavigation();
 
 /* Динамічний адаптив */
 // Документація: https://template.fls.guru/template-docs/dinamicheskij-adaptiv.html
-// import "./libs/dynamic_adapt.js";
+import './libs/dynamic_adapt.js';
 
 /* Форматування чисел */
 // import './libs/wNumb.min.js';

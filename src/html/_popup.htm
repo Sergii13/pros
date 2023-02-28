@@ -1,10 +1,47 @@
 <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
-			<div class="popup__text">
-				Text
-			</div>
-		</div>
-	</div>
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <div class="popup__title">Top up your wallet</div>
+      <div class="popup__subtitle">Sign up to easly to continue</div>
+      <form action="#" class="popup-form popup__form">
+        <div class="form-item">
+          <label class="form-item__label">
+            Amount
+            <input
+              autocomplete="off"
+              type="text"
+              name="form[]"
+              data-error="Ошибка"
+              placeholder="100$"
+              class="input form-item__input"
+            />
+          </label>
+        </div>
+        <div class="popup-form__text-info">
+          Minimal amount to deposit - 100$
+        </div>
+        <div class="popup-form__block">
+          <div class="popup-form__img">
+            <img src="@img/profile/wallet.svg" alt="" />
+          </div>
+          <div class="popup-form__content">
+            <h4>We will refund the money if you do not find a client</h4>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s.
+            </p>
+          </div>
+        </div>
+        <div class="popup-form__bottom-row">
+          <div class="popup-form__type-payment">
+            <img src="@img/profile/vise.svg" alt="" />
+            Credit card
+          </div>
+          <div class="popup-form__sum">100$</div>
+        </div>
+        <button class="button popup-form__button">Make deposit</button>
+      </form>
+    </div>
+  </div>
 </div>
