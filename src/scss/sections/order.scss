@@ -112,6 +112,39 @@
       }
     }
   }
+  &__viewpass {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('@img/svg/eye-close.svg') center / contain no-repeat;
+    bottom: 18px;
+    right: 20px;
+    opacity: 0.7;
+    @media (max-width: $mobile) {
+      bottom: 13px;
+      right: 15px;
+      width: 15px;
+      height: 15px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 22px;
+      background: #000;
+      height: 2px;
+      opacity: 0.7;
+      transform: translate(-50%, -50%) rotate(30deg);
+      @media (max-width: $mobile) {
+        width: 17px;
+      }
+    }
+    &._viewpass-active {
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+
   // .form__name-text
   &__name-text {
     @include adaptiveValue('font-size', 20, 12);
@@ -312,6 +345,36 @@
   }
   // .form-item__input
   &__input {
+  }
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(21);
+    @media (max-width: $mobileSmall) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: rem(10);
+    }
+  }
+  &__name-img {
+    background: linear-gradient(
+      180deg,
+      rgba(120, 151, 218, 0.1) 0%,
+      rgba(120, 151, 218, 0) 100%
+    );
+    border: 1px solid rgba(120, 151, 218, 0.1);
+    border-radius: 20px;
+    height: 59px;
+    padding: 0 rem(20);
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 155%;
+    @media (max-width: $mobile) {
+      height: 40px;
+      padding: 0 10px;
+      font-size: 14px;
+    }
   }
   &__icon {
     position: absolute;

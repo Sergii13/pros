@@ -169,6 +169,33 @@ body::after {
       }
     }
   }
+  &__items {
+    display: grid;
+    gap: rem(20);
+    margin-top: 20px;
+    @media (max-width: $mobile) {
+      gap: rem(10);
+      margin-top: 15px;
+    }
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+    .input {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 155%;
+      @media (max-width: $mobile) {
+        font-size: 14px;
+      }
+    }
+
+    .form-item__label {
+      font-size: 18px;
+      @media (max-width: $mobile) {
+        font-size: 16px;
+      }
+    }
+  }
   // .popup-form__type-payment
   &__type-payment {
     display: inline-flex;

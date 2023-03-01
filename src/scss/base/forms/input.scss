@@ -37,6 +37,13 @@ textarea {
   }
   &._form-error {
   }
+  &_upload {
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -1;
+    opacity: 0;
+  }
 }
 .input[placeholder]:not([data-placeholder-nohiden]) {
   &::placeholder {
@@ -44,6 +51,9 @@ textarea {
   }
   &:focus::placeholder {
     opacity: 0;
+  }
+  &.pass {
+    padding-right: 40px;
   }
 }
 
@@ -54,5 +64,8 @@ textarea.input {
   @media (max-width: $mobile) {
     padding: 13px;
     height: 100px;
+  }
+  &.big {
+    height: 300px;
   }
 }
